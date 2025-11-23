@@ -1,0 +1,165 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+* {
+  transition: all 0.3s ease;
+}
+
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade {
+  animation: fade-up 0.9s ease-out forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.9s ease-out;
+}
+
+.hover-float {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+button,
+.btn {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+#mobileMenu a {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#mobileMenu a:hover {
+  color: #a855f7;
+}
+
+@media (max-width: 768px) {
+  #home h2 {
+    font-size: 1.8rem;
+  }
+  #home p {
+    font-size: 0.95rem;
+  }
+  #home button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  #home img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+#products .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  animation: fade-up 1s ease-out;
+}
+
+@media (max-width: 1024px) {
+  #products .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #products .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #products .grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+#categories .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  animation: fade-up 1s ease-out;
+}
+
+@media (max-width: 768px) {
+  #categories .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #categories .grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 7px rgba(168, 85, 247, 0.4);
+}
+
+@media (max-width: 480px) {
+  #contact form input,
+  #contact form textarea,
+  #contact form button {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.7rem;
+  }
+}
+
+
+img {
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
